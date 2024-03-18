@@ -1,0 +1,27 @@
+div.body_block {
+    padding: 0 1% 0 1%;
+}
+
+div.sch-home-images {
+    position: relative;
+}
+
+div.sch-home-images img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+div.sch-home-images span.text-on-image {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font: 300% IranNastaliqTTF !important;
+    color: #FEFEFE;
+}
+
+@media screen and (max-width:800px) {
+    div.sch-home-images img {
+        height: auto !important;
+    }   
+}

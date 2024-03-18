@@ -1,0 +1,36 @@
+div.form-messages {
+    margin-top: -1%;
+    margin-bottom: 5%;
+}
+
+div.alert {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ea5052;
+    color: #FEFEFE;
+    font-size: 85% !important;
+    border-radius: 3px;
+}
+
+div.alert a.close {
+    font-size: 36px !important;
+}
+
+@media screen and (max-width:800px) {
+    div.form-messages {
+        margin-top: -5%;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    div.form-messages {
+        margin-top: -7.5%;
+        margin-bottom: 10%;
+    }
+}

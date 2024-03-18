@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    /* background-color: #00a8e8; */
+    background-color: #0177d7;
+    color: #EFEFEF;
+}
+
+header span.company-name {
+    font-size: 300%;
+    font-weight: 900;
+}
+
+header img {
+    margin-top: 5vh;
+    width: 100px;
+    height: 80px;
+}
+
+header span.comapny-slogan {
+    font-size: 250%;
+    font-weight: 600;
+    font-family: IranNastaliqTTF !important;
+    word-spacing: 5px;
+}

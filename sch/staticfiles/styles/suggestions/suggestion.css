@@ -1,0 +1,31 @@
+select[name="year"] {
+    border: 2px solid #3578e9;
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+}
+
+select[name="stud_field"] {
+    border: 2px solid #3578e9;
+    border-top: none;
+    border-bottom: none;
+}
+
+textarea[name="sug_msg"] {
+    border: 2px solid #3578e9;
+    border-top: none;
+    border-radius: 0 0 7px 7px;
+}
+
+input[type="submit"] {
+    margin-top: 24px;
+    background-color: #AEAEAE;
+    border: 2px solid #3578e9;
+    border-radius: 7px;
+}
+
+@media screen and (min-height:770px) {
+    div.suggestion-div {
+        height: 60vh;
+        /* display: flex; */
+    }
+}

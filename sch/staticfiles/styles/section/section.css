@@ -1,0 +1,149 @@
+.body_block{
+    direction: rtl;
+    height: 1600px
+    ;
+}
+.headcount{
+    width: 100%;
+    /* height: 224px; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    background-color: #0177d7;
+    word-spacing: 50%;
+    margin-top: -35px;
+    position: relative;
+    
+
+}
+h1{
+    color: #fefefe;
+    font-weight: bold;
+    font-size: 400%;
+    font-family: TerafikTTF !important;
+    opacity: 0.85;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-top: 10px; */
+}
+.sphead{
+    color: #fefefe;
+    font-family: TerafikTTF !important;
+    opacity: 0.85;
+    margin-top: 15px;
+    /* font-size: 75%; */
+}
+h2{
+    color: #fefefe;
+    font-weight: bolder;
+    font-family: TerafikTTF !important;
+    font-size: 175%;
+    opacity: 0.85;
+    margin-top: 20px;
+}
+.imgtop{
+    margin-top: 13px;
+    width: 100%;
+    height: 250px;
+    
+    position: absolute;
+    left: 1px;
+}
+.maintext{
+    position: absolute;
+    margin-top: 380px;
+    font-family: TerafikTTF !important;
+    word-spacing: 125%;
+    line-height: 165%;
+    text-align: right;
+    font-size: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.im1{
+    width: 30%;
+    height: 150px;
+}
+.im2{
+    width: 30%;
+    height: 150px;
+}
+.im1 img{
+    position: absolute;
+    top: 1090px;
+    right: 54%;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 32%;
+    height: 83%;
+    border-top-left-radius: 7%;
+    border-bottom-right-radius: 7%;
+}
+.im2 img{
+    position: absolute;
+    top: 950px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 32%;
+    height: 83%;
+    right: 13%;
+    border-top-left-radius: 7%;
+    border-bottom-right-radius:7% ;
+    
+  }
+  @media screen and (max-width:810px){
+    .im2 img{
+        position: absolute;
+        right: 28%;
+        width: 43%;
+ 
+        
+      }
+      .im1 img{
+        position: absolute;
+        right: 28%;
+        width: 43%;
+        top: 1200px;
+ 
+        
+      }
+
+  }
+  @media screen and (max-width:440px){
+
+    .im2 img{
+        position: absolute;
+        right: 20%;
+        width: 60%;
+ 
+        
+      }
+      .im1 img{
+        position: absolute;
+        right: 20%;
+        width: 60%;
+        top: 1200px;
+ 
+        
+      }
+  }
+  @media screen and (max-width:320px){
+    .im2 img{
+        position: absolute;
+        right: 20%;
+        width: 60%;
+        top: 999px;
+ 
+        
+      }
+      .im1 img{
+        position: absolute;
+        right: 20%;
+        width: 60%;
+        top: 1227px;
+ 
+        
+      }
+  }
+
+  

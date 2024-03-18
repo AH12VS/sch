@@ -1,0 +1,54 @@
+* {
+    font-family: RoyaTTF !important;
+}
+
+nav ul {
+    padding: 0px !important;
+}
+
+div.policy-container {
+    margin-bottom: 5vh;
+}
+
+div.policy-container {
+    direction: rtl;
+    text-align: right;
+    padding: 2.5% 20% 2.5% 20%;
+    line-height: 165%;
+    word-spacing: 125%;
+    font-size: 100% !important;
+}
+
+div.released-time {
+    opacity: 0.85 !important;
+}
+
+h1.policy-title {
+    text-align: center !important;
+    margin: 2.5vh 0 5vh 0;
+    word-spacing: 50%;
+    opacity: 0.75;
+}
+
+h2.section-title {
+    margin: 5vh 0 1vh 0;
+    word-spacing: 50%;
+    opacity: 0.85;
+}
+
+div.policy-container img {
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    margin: 2.5vh auto 2.5vh auto !important;
+} 
+
+div.thumbnail-div img {
+    margin: 5vh auto 7vh auto !important;
+}
+
+@media screen and (max-width: 800px) {
+    div.policy-container {
+        padding: 5%;
+    }
+}

@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(to right, #d16ba5, #5ffbf1);
+}
+
+div.copyr-div {
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    color: #323232;
+}
+
+div.copyr-sign label {
+    font-size: 500%;
+    padding: 1px;
+}
+
+div.copyr-texts {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-weight: bold;
+}
