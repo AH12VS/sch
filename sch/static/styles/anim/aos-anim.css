@@ -1,0 +1,43 @@
+.fdup {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+.fdup.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* .fddwn {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fddwn.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fdrgt {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fdrgt.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fdlft {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fdlft.active {
+    transform: translateX(0);
+    opacity: 1;
+} */

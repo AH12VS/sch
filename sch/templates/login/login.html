@@ -1,0 +1,29 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  ورود
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/parts/form/form.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/login/login.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="login-div">
+    {% include 'parts/alerts/alerts.html' %}
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-inner-div">
+        {% comment %} <input type="number" name="nat_code" minlength="10" maxlength="10" placeholder="کد ملی" required />
+        <input type="password" name="passwd" minlength="8" maxlength="30" placeholder="رمز عبور" required /> {% endcomment %}
+        <input type="number" name="nat_code" placeholder="کد ملی" />
+        <input type="password" name="passwd" placeholder="رمز عبور" />
+        <input type="submit" value="ورود" />
+      </div>
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'parts/base/base.html' %}
+{% load static %}
+
+{% block title_block %}
+  اخبار
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/news/news.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/parts/title/title.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="news">
+    <div class="show-detail">
+      <a href="">اخبار</a>
+    </div>
+    {% for news_part in paginated_objects %}
+      <div class="news-part fdup">
+        <a href="{{ news_part.get_absolute_url }}">
+          {% if news_part.thumbnail %}
+            <img src="{{ news_part.thumbnail.url }}" alt="" />
+          {% else %}
+            <img src="{% static 'mmd/img/posts/def-post-img.svg' %}" alt="" />
+          {% endif %}
+        </a>
+        <a href="{{ news_part.get_absolute_url }}"><p>{{ news_part.body_pre }}</p></a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include 'parts/pagination/pagination.html' %}
+{% endblock %}

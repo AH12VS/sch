@@ -1,0 +1,112 @@
+* {
+    font-family: RoyaTTF !important;
+}
+
+nav ul {
+    padding: 0px !important;
+}
+
+div.article-container {
+    margin-bottom: 5vh;
+}
+
+div.article-data {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+div.article-data-left-side {
+    display: flex;
+    align-items: end;
+}
+
+div.article-data-right-side {
+    display: flex;
+    flex-direction: column-reverse;
+}
+div.article-publish-time {
+    margin-top: 10px;
+    opacity: 0.75;
+}
+
+div.article-creator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.article-creator img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover !important;
+    /* opacity: 1 !important; */
+    margin-left: 5px !important;
+}
+
+div.article-creator a {
+    text-decoration: none;
+    font-size: 75%;
+    direction: ltr;
+    font-family: TerafikTTF !important;
+    opacity: 0.75;
+}
+
+
+div.article-container {
+    padding: 2.5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: right;
+    direction: rtl;
+    line-height: 165%;
+    word-spacing: 125%;
+    font-size: 100% !important;
+}
+
+p.article-title {
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+    font-family: TerafikTTF !important;
+    font-weight: bold;
+    font-size: 150%;
+    word-spacing: 50%;
+    opacity: 0.85;
+}
+
+div.article-container img {
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    margin-top: 2.5vh !important;
+    margin-bottom: 2.5vh !important;
+    margin: auto;
+} 
+
+div.thumbnail-div img {
+    margin-top: 5vh !important;
+    margin-bottom: 7vh !important;
+}
+
+/* div.thumbnail-div img {
+    max-width: 100% !important;
+    object-fit: contain;
+}
+
+div.article-div img {
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    margin-top: 2.5vh !important;
+    margin-bottom: 2.5vh !important;
+    margin: auto;
+} */
+
+@media screen and (max-width: 800px) {
+    div.article-container {
+        padding: 5%;
+    }
+}

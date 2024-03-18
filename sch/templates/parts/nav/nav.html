@@ -1,0 +1,53 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/parts/nav/nav.css' %}" />
+
+<script src="{% static 'scripts/parts/nav/nav.js' %}"></script>
+
+<nav>
+  <div class="resp-nav">
+    <label class="hamg-menu-icon" onclick="show_menu()">&#9776;</label>
+    <label class="comp-name-navbar">هنرستان زنده یاد محمدیان</label>
+    <div class="resp-nav-div" id="resp-nav-div-id">
+      <a class="menu-close-btn" onclick="close_menu()">&times;</a>
+      <div class="resp-nav-links-div">
+        <a href="{% url 'home:home_page' %}">خانه</a>
+        <a href="{% url 'contactus:contactus_page' %}">تماس با ما</a>
+        <a href="{% url 'events:events_page' %}">اتفاقات</a>
+        <a href="{% url 'news:news_page' %}">اخبار</a>
+        <a href="{% url 'articles:articles_page' %}">مقالات</a>
+        <a href="{% url 'suggestions:suggestion_page' %}">انتقادات</a>
+        {% if not request.user.is_authenticated %}
+          <a href="{% url 'login:login_page' %}">ورود</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="home-nav-div">
+    <ul>
+      <li>
+        <a href="{% url 'home:home_page' %}">خانه</a>
+      </li>
+      <li>
+        <a href="{% url 'contactus:contactus_page' %}">تماس با ما</a>
+      </li>
+      <li>
+        <a href="{% url 'events:events_page' %}">اتفاقات</a>
+      </li>
+      <li>
+        <a href="{% url 'news:news_page' %}">اخبار</a>
+      </li>
+      <li>
+        <a href="{% url 'articles:articles_page' %}">مقالات</a>
+      </li>
+      <li>
+        <a href="{% url 'suggestions:suggestion_page' %}">انتقادات</a>
+      </li>
+      <li>
+        {% if not request.user.is_authenticated %}
+          <a href="{% url 'login:login_page' %}">ورود</a>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+</nav>

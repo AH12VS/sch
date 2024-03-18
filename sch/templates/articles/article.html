@@ -1,0 +1,90 @@
+{% extends 'parts/base/base.html' %}
+{% load static %}
+{% load jalali_tags %}
+
+{% block title_block %}
+  مقاله|{{ article.title }}
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/articles/article.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="article-container">
+    <div class="article-data">
+      <div class="article-data-left-side">
+        <label><img src="{% static 'mmd/img/posts/views-icon.png' %}" alt="" />{{ article.views_count }}</label>
+        <label><img src="{% static 'mmd/img/posts/comments-icon.png' %}" alt="" />{{ article.article_comments.all|length }}</label>
+        <label><img src="{% static 'mmd/img/posts/copy-icon.png' %}" alt="" /></label>
+      </div>
+      <div class="article-data-right-side">
+        <div class="article-publish-time">
+          <span>{{ article.publish|to_jalali:'%Y/%m/%d' }}</span>
+          {% comment %} <span>{{ article.publish|date:'Y/m/d' }}</span> {% endcomment %}
+        </div>
+        <div class="article-creator">
+          {% if article.author.img_prof %}
+            <img src="{{ article.author.img_prof.url }}" alt="" />
+          {% else %}
+            <img src="{% static 'mmd/img/staffs/def-staff-img.png' %}" alt="" />
+          {% endif %}
+          <a href="{{ article.author.get_absolute_url }}">@{{ article.author }}</a>
+        </div>
+      </div>
+    </div>
+    <article>
+      <h1 class="article-title">{{ article.title }}</h1>
+
+      <div class="thumbnail-div">
+        {% if article.thumbnail %}
+          <img src="{{ article.thumbnail.url }}" alt="" />
+        {% endif %}
+      </div>
+
+      <div class="article-body">
+        {% autoescape off %}
+          {{ article.body }}
+        {% endautoescape %}
+      </div>
+    </article>
+
+    {% if article.tags.all|length != 0 %}
+      <div class="article-tags">
+        <label class="article-tags-lbl">برچسب ها</label>
+      </div>
+      <div class="tags">
+        {% for tag in article.tags.all %}
+          <div class="tag">
+            <a href="{% url 'articles:articles_tag_filtered_page' tag.slug %}">{{ tag }}</a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="article-comments">
+      <label class="article-comments-lbl">نظرات</label>
+      <div class="add-comment">
+        <form method="post">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="نام" />
+          <textarea name="comment_msg" rows="5" placeholder="متن نظر"></textarea>
+          <input type="submit" value="ارسال" />
+        </form>
+      </div>
+      <div class="comments">
+        {% for comment in comments %}
+          <div class="comment">
+            <div class="comment-data">
+              <label>{{ comment.name }}</label>
+              <label>{{ comment.created }}</label>
+            </div>
+            <div class="comment-msg">
+              <p>{{ comment.comment_msg }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/parts/pagination/pagination.css' %}">
+
+{% comment %} <div class="pagination">
+  <a href="" class="pagination-pre-btn">‹</a>
+  <div class="pagination-nums">
+    <a href="">3</a>
+    <a href="">4</a>
+    <a href="">5</a>
+    <a href="">6</a>
+    <a href="">7</a>
+  </div>
+  <a href="" class="pagination-nxt-btn">›</a>
+</div> {% endcomment %}
+
+<ul class="pagination">
+  {% if paginated_objects.has_previous %}
+    <li><a href="?pn={{ paginated_objects.previous_page_number }}" class="prev">‹</a></li>
+  {% else %}
+    <li><a href="#" class="prev">‹</a></li>
+  {% endif %}
+  
+  {% for pn in paginated_objects.paginator.page_range %}
+    {% if pn == paginated_objects.number %}
+      <li><a href="#" class="pgactive">{{pn}}</a></li>
+    {% else %}
+      {% if pn > paginated_objects.number|add:'-3' and pn < paginated_objects.number|add:'3' %}
+        <li><a href="?pn={{pn}}">{{pn}}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if paginated_objects.has_next %}
+    <li><a href="?pn={{ paginated_objects.next_page_number }}" class="next">›</a></li>
+  {% else %}
+    <li><a href="#" class="next">›</a></li>
+  {% endif %}
+</ul>
+

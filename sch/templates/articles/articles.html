@@ -1,0 +1,43 @@
+{% extends 'parts/base/base.html' %}
+{% load static %}
+
+{% block title_block %}
+  مقالات
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/articles/articles.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/parts/title/title.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="articles">
+    <div class="show-detail">
+      <a href="">مقالات</a>
+    </div>
+    {% for article in paginated_objects %}
+      <div class="article fdup">
+        <a href="{{ article.get_absolute_url }}">
+          {% if article.thumbnail %}
+            <img src="{{ article.thumbnail.url }}" alt="" />
+          {% else %}
+            <img src="{% static 'mmd/img/posts/def-post-img.svg' %}" alt="" />
+          {% endif %}
+        </a>
+        <div class="article-inner-div">
+          <a href="{{ article.get_absolute_url }}" class="article-title">{{ article.title }}</a>
+          <p>{{ article.body_pre }}</p>
+          <div class="article-bottom-div">
+            <a href="{{ article.author.get_absolute_url }}" class="article-creator">سازنده</a>
+            <div class="article-bottom-left-side">
+              <label class="article-bottom-left-side-label1"><img src="{% static 'mmd/img/posts/views-icon.png' %}" alt="" />{{ article.views_count }}</label>
+              <label><img src="{% static 'mmd/img/posts/comments-icon.png' %}" alt="" />{{ article.article_comments.all|length }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include 'parts/pagination/pagination.html' %}
+{% endblock %}

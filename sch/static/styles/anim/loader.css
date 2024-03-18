@@ -1,0 +1,32 @@
+div#main-content {
+    display: none;
+}
+
+div#loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #0177d7;
+}
+
+div#loader img {
+    width: 240px;
+    height: auto;
+    animation: loader-anim 2.5s infinite ease;
+}
+
+
+@keyframes loader-anim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    } 
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,41 @@
+{% extends 'parts/base/base.html' %}
+{% load static %}
+{% load jalali_tags %}
+
+{% block title_block %}
+  خبر|{{ news_page.title }}
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/news/news-page.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="news-container">
+    <div class="news-data">
+      <div class="news-data-right-side">
+        <div class="news-publish-time">
+          <span>{{ news_page.publish|to_jalali:'%Y/%m/%d' }}</span>
+          {% comment %} <span>{{ article.publish|date:'Y/m/d' }}</span> {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+    <article>
+      <h1 class="news-title">{{ news_page.title }}</h1>
+
+      <div class="thumbnail-div">
+        {% if news_page.thumbnail %}
+          <img src="{{ news_page.thumbnail.url }}" alt="" />
+        {% endif %}
+      </div>
+
+      <div class="news-body">
+        {% autoescape off %}
+          {{ news_page.body }}
+        {% endautoescape %}
+      </div>
+    </article>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  بخش ها|کامپیوتر
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/section/section.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="headcount">
+    <h1>کامپیوتر</h1>
+    <p class="sphead">
+      کمک شایان برای طراحان سایت<br />لورم ایپسوم متن ساختگی برای طراحان <br />اینجاست که به شما کمک کند
+    </p>
+    <h2>مرتبط با بخش</h2>
+
+    <img src="{% static 'mmd/img/tmp/cctv-tmp-3.jpg' %}" alt="" class="imgtop" />
+
+    <span class="maintext">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br /> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.<br /> کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد</span>
+    <div class="im">
+      <div class="im1">
+        <img src="{% static 'mmd/img/tmp/output_img_2.png' %}" alt="" />
+      </div>
+      <div class="im2">
+        <img src="{% static 'mmd/img/tmp/cctv-tmp-2.jpeg' %}" alt="" />
+      </div>
+    </div>
+  </div>
+{% endblock %}

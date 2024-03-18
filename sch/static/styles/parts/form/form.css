@@ -1,0 +1,67 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    max-width: 540px;
+    margin: auto;
+    overflow: auto;
+    background-color: inherit;
+    font-size: 103%;
+    border: 2px solid rgba(53, 120, 233, 0.5);
+    border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px 10px 30px 10px;
+}
+
+form input {
+    direction: rtl;
+    background-color: #EAEAEA;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    border: none;
+    font-size: 80%;
+    opacity: 0.7;
+}
+
+form select {
+    direction: rtl;
+    background-color: #EAEAEA;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    border: none;
+    font-size: 80%;
+    opacity: 0.7;
+}
+
+form textarea {
+    direction: rtl;
+    background-color: #EAEAEA;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    border: none;
+    font-size: 80%;
+    opacity: 0.7;
+    resize: vertical;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width:800px) {
+    form {
+        width: 90%;
+    }
+}

@@ -1,0 +1,38 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  ورود
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/parts/form/form.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/suggestions/suggestion.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="suggestion-div">
+
+    {% include 'parts/alerts/alerts.html' %}
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-inner-div">
+        <select name="year" id="">
+          {% comment %} <option value=""></option> {% endcomment %}
+          <option value="y1">سال اول</option>
+          <option value="y2">سال دوم</option>
+          <option value="y3">سال سوم</option>
+        </select>
+        <select name="stud_field" id="">
+          <option value="computer">کامپیوتر</option>
+          <option value="chemical">شیمیایی</option>
+        </select>
+        <textarea name="sug_msg" rows="7" placeholder="متن انتقاد"></textarea>
+        {% comment %} <textarea name="sug_msg" rows="5"></textarea> {% endcomment %}
+        <input type="submit" value="ارسال" />
+      </div>
+    </form>
+  </div>
+{% endblock %}

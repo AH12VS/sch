@@ -1,0 +1,20 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  کپی رایت
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/copyr/copyr.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="copyr-div">
+    <div class="copyr-sign">
+      <label>&copy;</label>
+    </div>
+    <div class="copyr-texts">تمامی حقوق سایت مطعلق به هنرستان زنده یاد محمدیان میباشد و هر گونه کپی برداری از آن ممنوع میباشد</div>
+  </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  کپی رایت
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/staffs/staffs.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/parts/title/title.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="staffs">
+    <div class="show-detail">
+      <a href="">کارکنان</a>
+    </div>
+    {% for staff in staffs %}
+      <a href="{{ staff.get_absolute_url }}">
+        <div class="staff">
+          {% if staff.img_prof %}
+            <img src="{{ staff.img_prof.url }}" alt="" />
+          {% else %}
+            <img src="{% static 'mmd/img/staffs/def-staff-img.png' %}" alt="" />
+          {% endif %}
+          <label>{{ staff }}</label>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'parts/base/base.html' %}
+{% load static %}
+
+{% block title_block %}
+  اتفاقات
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/events/events.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/parts/title/title.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="events">
+    <div class="show-detail">
+      <a href="">اتفاقات</a>
+    </div>
+    {% for event in paginated_objects %}
+      <div class="event fdup">
+        <a href="{{ event.get_absolute_url }}">
+          {% if event.thumbnail %}
+            <img src="{{ event.thumbnail.url }}" alt="" />
+          {% else %}
+            <img src="{% static 'mmd/img/posts/def-post-img.svg' %}" alt="" />
+          {% endif %}
+        </a>
+        <a href="{{ event.get_absolute_url }}"><p>{{ event.body_pre }}</p></a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include 'parts/pagination/pagination.html' %}
+{% endblock %}

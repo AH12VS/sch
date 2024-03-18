@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      هنرستان زنده یاد محمدیان |{% block title_block %}
+
+      {% endblock %}
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'mmd/img/parts/title/sch-fav-w.png' %}" />
+    <link rel="stylesheet" href="{% static 'styles/parts/base/base.css' %}" />
+
+    {% comment %}AOS Animation{% endcomment %}
+    <script src="{% static 'scripts/anim/aos-anim.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles/anim/aos-anim.css' %}" />
+    {% comment %}END AOS Animation{% endcomment %}
+
+    {% comment %}loader{% endcomment %}
+    <script src="{% static 'scripts/loader/loader.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles/anim/loader.css' %}" />
+    {% comment %}END loader{% endcomment %}
+
+    {% block head_block %}
+
+    {% endblock %}
+  </head>
+
+  <body onload="loader_func()">
+    <div id="loader">
+      <img src="{% static 'mmd/img/parts/title/sch-fav-w.png' %}" alt="" />
+    </div>
+
+    <div id="main-content">
+      {% include 'parts/header/header.html' %}
+      {% include 'parts/nav/nav.html' %}
+
+      <div class="body_block" id="body_block">
+        {% block body_block %}
+
+        {% endblock %}
+      </div>
+
+      {% include 'parts/footer/footer.html' %}
+    </div>
+  </body>
+</html>

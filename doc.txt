@@ -1,0 +1,4 @@
+ADMIN = {
+    "email": "admin@admin.admin",
+    "pass": "adminpa33" 
+} 

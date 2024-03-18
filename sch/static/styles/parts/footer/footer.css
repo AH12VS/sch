@@ -1,0 +1,76 @@
+/* footer */
+footer {
+    /* background: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%); */
+    background-color: #3578e9;
+    margin-top: 10vh;
+    padding: 2.5%;
+    padding-bottom: 1%;
+}
+
+footer a {
+    font-family: TerafikTTF !important;
+    color: #EAEAEA;
+    opacity: 0.9;
+}
+/* link section */
+div.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.footer-links a {
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 150%;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3db2d3;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+div.footer-links a:hover {
+    background-color: #4ec3e4;
+}
+
+/* copyr */
+div.copyr {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+div.copyr a {
+    text-decoration: none;
+    font-size: 160%;
+    font-weight: 1000;
+    font-family: IranNastaliqTTF !important;
+}
+
+div.copyr a:hover {
+    text-decoration: underline;
+}
+
+/* copyr */
+
+/* footer */
+
+
+@media screen and (max-width:1280px) {
+
+    /* link section */
+    div.footer-links {
+        flex-direction: column;
+    }
+
+    div.footer-links-section {
+        text-align: center;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+    }
+
+    /* link section */
+}

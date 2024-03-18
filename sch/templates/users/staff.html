@@ -1,0 +1,49 @@
+{% extends 'parts/base/base.html' %}
+
+{% load static %}
+
+{% block title_block %}
+  کپی رایت
+{% endblock %}
+
+{% block head_block %}
+  <link rel="stylesheet" href="{% static 'styles/staffs/staff.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <div class="profile">
+    <div class="prof-top"></div>
+    <div class="prof-img">
+      {% if staff.img_prof %}
+        <img src="{{ staff.img_prof.url }}" alt="" />
+      {% else %}
+        <img src="{% static 'mmd/img/staffs/def-staff-img.png' %}" alt="" />
+      {% endif %}
+    </div>
+    <div class="prof-texts">
+      <div>
+        <label>نام</label>
+        <span>{{ staff.fname }}</span>
+      </div>
+      <div>
+        <label>نام خانوادگی</label>
+        <span>{{ staff.lname }}</span>
+      </div>
+      <div>
+        <label>سن</label>
+        <span>{{ staff.age }}</span>
+      </div>
+      <div>
+        <label>تحصیلات</label>
+        <span>{{ edu }}</span>
+      </div>
+      <div>
+        <label>منصب</label>
+        <span>{{ pos }}</span>
+      </div>
+      <div class="social">
+        <a href="">ارتباط در شاد</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
